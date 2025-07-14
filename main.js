@@ -1,7 +1,7 @@
 // Detectar qual página estamos
 const pagina = window.location.pathname.split("/").pop();
 
-if (pagina === "indx.html") {
+if (pagina === "index.html") {
   const playBtn = document.getElementById("playBtn");
   playBtn.addEventListener("click", () => {
     sessionStorage.setItem("jogoIniciado", "sim");
@@ -12,7 +12,7 @@ if (pagina === "indx.html") {
 
 if (pagina === "perguntas.html") {
   if (sessionStorage.getItem("jogoIniciado") !== "sim") {
-    window.location.href = "indx.html";
+    window.location.href = "index.html";
   }
 
   const perguntaEl = document.getElementById("pergunta");
@@ -115,7 +115,7 @@ if (pagina === "perguntas.html") {
 
 if (pagina === "resposta.html") {
   if (sessionStorage.getItem("jogoIniciado") !== "sim") {
-    window.location.href = "indx.html";
+    window.location.href = "index.html";
   }
 
   const resultadoEl = document.getElementById("resultado");
@@ -130,6 +130,6 @@ if (pagina === "resposta.html") {
 
   jogarNovamenteBtn.addEventListener("click", () => {
     sessionStorage.clear();
-    window.location.href = "indx.html";
+    window.location.href = "index.html";
   });
 }
